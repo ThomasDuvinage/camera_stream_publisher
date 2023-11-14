@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="camera_stream_publisher" type="camera_stream_publisher_node" name="camera_stream_publihsher_node"  output="screen">
+        <param name="video_source" type="int" value="2" />
+    </node>
+
+</launch>
