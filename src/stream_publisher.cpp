@@ -10,10 +10,10 @@
 int main(int argc, char** argv)
 {
 
-  ros::init(argc, argv, "camera_stream_publihsher_node");
+  ros::init(argc, argv, "camera_stream_publisher_node");
   ros::NodeHandle nh("~");
   image_transport::ImageTransport it(nh);
-  image_transport::Publisher pub = it.advertise("camera/image", 1);
+  image_transport::Publisher pub = it.advertise("image", 1);
 
   int video_source;
   nh.param<int>("video_source", video_source, 0);
