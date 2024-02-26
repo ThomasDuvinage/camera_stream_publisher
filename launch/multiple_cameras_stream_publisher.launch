@@ -1,0 +1,14 @@
+<launch>
+    <arg name="index_internal" default="2"/> 
+    <arg name="index_external" default="4"/> 
+
+    <node pkg="camera_stream_publisher" type="camera_stream_publisher_node" name="camera_stream_publisher"  output="screen">
+        <param name="video_source" type="int" value="$(arg index_internal)" />
+        <param name="published_topic" type="string" value="image" />
+    </node>
+
+    <node pkg="camera_stream_publisher" type="camera_stream_publisher_node" name="camera_stream_publisher_external"  output="screen">
+        <param name="video_source" type="int" value="$(arg index_external)" />
+        <param name="published_topic" type="string" value="image" />
+    </node>
+</launch>
