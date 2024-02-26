@@ -1,6 +1,8 @@
 <launch>
+    <arg name="index" default="0"/> 
     <node pkg="camera_stream_publisher" type="camera_stream_publisher_node" name="camera_stream_publisher"  output="screen">
-        <param name="video_source" type="int" value="2" />
+        <param name="video_source" type="int" value="$(arg index)" />
+        <param name="published_topic" type="string" value="image" />
     </node>
 
 </launch>
